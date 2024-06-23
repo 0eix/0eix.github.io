@@ -5,6 +5,7 @@ import ProjectSection from "@/components/ProjectSection";
 import PublicationsSection from "@/components/SelectedPublicationsSection";
 import bibtex from "@/data/bib/Publications.bib";
 import { homepageSection } from "@/website.config";
+import QuoteSection from "@/components/QuoteSection";
 
 export default function Page() {
   return (
@@ -13,6 +14,7 @@ export default function Page() {
         <>
           <AboutSection />
           <InterestsSection />
+          <QuoteSection />
         </>
       )}
       {/*{homepageSection.NewsSection && <NewsSection />}*/}

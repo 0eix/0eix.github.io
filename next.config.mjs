@@ -1,4 +1,8 @@
 import createMDX from "@next/mdx";
+import remarkGfm from 'remark-gfm';
+import remarkParse from "remark-parse";
+import rehypeStringify from "rehype-stringify";
+import remarkRehype from "remark-rehype";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -20,7 +24,10 @@ const nextConfig = {
 };
 
 const withMDX = createMDX({
-  // Add markdown plugins here, as desired
+    options: {
+        remarkPlugins: [remarkGfm, remarkParse, remarkRehype],
+        rehypePlugins: [rehypeStringify],
+    },
 });
 
 // Merge MDX config with Next.js config
