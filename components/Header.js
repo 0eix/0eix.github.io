@@ -1,5 +1,5 @@
 "use client";
-import { personalInfo } from "@/website.config";
+import { personalInfo, navigation } from "@/website.config";
 import {
   RiMenuLine,
   RiCloseLine,
@@ -25,6 +25,21 @@ export default function Header() {
     return null;
   }
 
+  const NavigationLinks = ({ links }, outerProps) => {
+    return (
+      <>
+        {links.map((link, index) => (
+          <Button asChild variant="ghost" {...outerProps} key={index}>
+            <Link href={link.route} {...link.innerProps}>
+              {link.name}
+            </Link>
+          </Button>
+        ))}
+      </>
+    );
+  };
+
+
   return (
     <div
       className={`flex flex-col fixed top-0 w-full bg-neutral-50/80 dark:bg-neutral-800/30 backdrop-blur-lg content-start `}
@@ -37,17 +52,18 @@ export default function Header() {
         </Button>
         <div className="flex">
           <div className="md:block hidden text-neutral-600 ">
-            <Button asChild variant="ghost">
-              <Link href={"/projects"} className=" font-normal">
-                Projects
-              </Link>
-            </Button>
-            <Button asChild variant="ghost" className=" font-normal">
-              <Link href={"/publications"}>Publications</Link>
-            </Button>
-            <Button asChild variant="ghost" className=" font-normal">
-              <Link href={"/cv.pdf"}>CV</Link>
-            </Button>
+            <NavigationLinks links={navigation} outerProps={{className: " font-normal"}} />
+            {/*<Button asChild variant="ghost">*/}
+            {/*  <Link href={"/projects"} className=" font-normal">*/}
+            {/*    Projects*/}
+            {/*  </Link>*/}
+            {/*</Button>*/}
+            {/*<Button asChild variant="ghost" className=" font-normal">*/}
+            {/*  <Link href={"/publications"}>Publications</Link>*/}
+            {/*</Button>*/}
+            {/*<Button asChild variant="ghost" className=" font-normal">*/}
+            {/*  <Link href={"/Nanevie_AMEGASSI.pdf"} target={"_blank"}>CV</Link>*/}
+            {/*</Button>*/}
           </div>
 
           <Button
@@ -87,15 +103,16 @@ export default function Header() {
         }`}
         onClick={() => setMenuIsOpen(false)}
       >
-        <Button asChild variant="ghost">
-          <Link href={"/projects"}>Projects</Link>
-        </Button>
-        <Button asChild variant="ghost">
-          <Link href={"/publications"}>Publications</Link>
-        </Button>
-        <Button asChild variant="ghost">
-          <Link href={"/cv.pdf"}>CV</Link>
-        </Button>
+        <NavigationLinks links={navigation} />
+        {/*<Button asChild variant="ghost">*/}
+        {/*  <Link href={"/projects"}>Projects</Link>*/}
+        {/*</Button>*/}
+        {/*<Button asChild variant="ghost">*/}
+        {/*  <Link href={"/publications"}>Publications</Link>*/}
+        {/*</Button>*/}
+        {/*<Button asChild variant="ghost">*/}
+        {/*  <Link href={"/Nanevie_AMEGASSI.pdf"} target={"_blank"}>CV</Link>*/}
+        {/*</Button>*/}
       </div>
     </div>
   );

@@ -8,6 +8,8 @@ import {
   RiLinkedinBoxFill,
   RiTwitterXLine,
 } from "@remixicon/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faResearchgate, faOrcid } from "@fortawesome/free-brands-svg-icons";
 import { Button } from "./ui/button";
 
 export default function AboutSection() {
@@ -20,6 +22,8 @@ export default function AboutSection() {
             alt="profile image"
             width={120}
             height={120}
+            quality={100}
+            style={{objectFit: "contain"}}
             className="md:hidden sm:block object-cover aspect-square"
           ></Image>
         )}
@@ -45,7 +49,11 @@ export default function AboutSection() {
                       <RiGithubFill size={16} />
                     ) : social.name === "Twitter" ? (
                       <RiTwitterXLine size={16} />
-                    ) : (
+                    ) : social.name === 'ResearchGate' ? (
+                      <FontAwesomeIcon icon={faResearchgate} />
+                    ): social.name === 'ORCID' ? (
+                      <FontAwesomeIcon icon={faOrcid} />
+                    ):(
                       <RiLinkedinBoxFill size={16} />
                     )}
                   </Link>
@@ -64,7 +72,7 @@ export default function AboutSection() {
           ></Image>
         )}
       </div>
-      <article className="flex flex-col gap-2">
+      <article className="flex flex-col gap-2 text-justify">
         <AboutMd />
       </article>
     </section>

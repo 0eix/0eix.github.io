@@ -4,6 +4,11 @@ import { websiteInfo } from "@/website.config";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+
+config.autoAddCss = false;
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
