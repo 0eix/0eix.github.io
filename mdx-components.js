@@ -6,6 +6,12 @@ export function useMDXComponents(components) {
         {...props}
       />
     ),
+    blockquote: (props) => (
+      <blockquote
+        className="italic"
+        {...props}
+      />
+    ),
     li: (props) => (
       <li
         className="text-base text-neutral-600 dark:text-neutral-300"

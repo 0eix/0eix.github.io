@@ -51,6 +51,10 @@
   @apply my-4 text-neutral-600 dark:text-neutral-200;
 }
 
+blockquote {
+  @apply bg-neutral-200 dark:bg-neutral-900;
+}
+
 .prose h1 {
   @apply text-3xl font-semibold tracking-tight mt-6 mb-2;
 }
@@ -123,7 +127,6 @@ blockquote {
 
 blockquote p {
     padding: 15px;
-    background: #eee;
     border-radius: 5px;
 }
 
@@ -133,4 +136,9 @@ blockquote p::before {
 
 blockquote p::after {
     content: '\201D';
+}
+
+.citation::before {
+    content: "\2014";
+    padding-right: 5px;
 }
