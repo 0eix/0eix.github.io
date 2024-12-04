@@ -10,7 +10,7 @@ import {
 } from "@remixicon/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faResearchgate, faOrcid } from "@fortawesome/free-brands-svg-icons";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 
 export default function AboutSection() {
   return (

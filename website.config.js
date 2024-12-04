@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "Nanevie AMEGASSI",
   profilePicture: "/profile.png", //optional
-  role: "Master Student in Cognitive Science",
+  role: "Graduate in Cognitive Science",
   university: "Grenoble Institute of Technology",
   universityWebsite: "",
   socialMedia: [
@@ -21,16 +21,15 @@ export const websiteInfo = {
 };
 
 export const navigation = [
-  // { name: "Projects", route: "/projects" },
+  { name: "Home", route: "/" },
   // { name: "Publications", route: "/publications" },
-  { name: "CV", route: "/Nanevie_AMEGASSI.pdf", innerProps: {target:"_blank"} },
-  // { name: "About", route: "/about" },
+  // { name: "Portfolio", route: "/projects" },
   // { name: "News", route: "/news" },
+  { name: "CV", route: "/Nanevie_AMEGASSI.pdf", innerProps: {target:"_blank"} },
 ];
 
 export const homepageSection = {
   AboutSection: true,
-  SelectedPublicationsSection: false,
-  ProjectSection: false,
-  NewsSection: false,
+  ResearchInterestSection: false,
+  SelectedQuoteSection: true,
 };

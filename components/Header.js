@@ -53,17 +53,6 @@ export default function Header() {
         <div className="flex">
           <div className="md:block hidden text-neutral-600 ">
             <NavigationLinks links={navigation} outerProps={{className: " font-normal"}} />
-            {/*<Button asChild variant="ghost">*/}
-            {/*  <Link href={"/projects"} className=" font-normal">*/}
-            {/*    Projects*/}
-            {/*  </Link>*/}
-            {/*</Button>*/}
-            {/*<Button asChild variant="ghost" className=" font-normal">*/}
-            {/*  <Link href={"/publications"}>Publications</Link>*/}
-            {/*</Button>*/}
-            {/*<Button asChild variant="ghost" className=" font-normal">*/}
-            {/*  <Link href={"/Nanevie_AMEGASSI.pdf"} target={"_blank"}>CV</Link>*/}
-            {/*</Button>*/}
           </div>
 
           <Button
@@ -104,15 +93,6 @@ export default function Header() {
         onClick={() => setMenuIsOpen(false)}
       >
         <NavigationLinks links={navigation} />
-        {/*<Button asChild variant="ghost">*/}
-        {/*  <Link href={"/projects"}>Projects</Link>*/}
-        {/*</Button>*/}
-        {/*<Button asChild variant="ghost">*/}
-        {/*  <Link href={"/publications"}>Publications</Link>*/}
-        {/*</Button>*/}
-        {/*<Button asChild variant="ghost">*/}
-        {/*  <Link href={"/Nanevie_AMEGASSI.pdf"} target={"_blank"}>CV</Link>*/}
-        {/*</Button>*/}
       </div>
     </div>
   );

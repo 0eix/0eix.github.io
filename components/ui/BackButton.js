@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import { RiArrowLeftSLine } from "@remixicon/react";
 import { useRouter } from "next/router";
 

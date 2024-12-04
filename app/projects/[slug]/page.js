@@ -4,7 +4,7 @@ import Link from "next/link";
 import { RiArrowLeftSLine } from "@remixicon/react";
 import { formatDate, getProjects } from "../utils";
 import { notFound } from "next/navigation";
-import BackButton from "@/components/BackButton";
+import BackButton from "@/components/ui/BackButton";
 
 export async function generateStaticParams() {
   const projectList = getProjects();
