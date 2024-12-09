@@ -25,14 +25,18 @@ export default function Header() {
     return null;
   }
 
-  const NavigationLinks = ({ links }, outerProps) => {
+  const NavigationLinks = ({ links, ...props }) => {
     return (
       <>
         {links.map((link, index) => (
-          <Button asChild variant="ghost" {...outerProps} key={index}>
-            <Link href={link.route} {...link.innerProps}>
-              {link.name}
-            </Link>
+          <Button asChild variant="ghost" {...props} key={index}>
+            {link.external ? (
+              <a href={link.route} target="_blank" rel="noopener noreferrer">
+                {link.name}
+              </a>
+            ) : (
+              <Link href={link.route}>{link.name}</Link>
+            )}
           </Button>
         ))}
       </>
@@ -52,7 +56,7 @@ export default function Header() {
         </Button>
         <div className="flex">
           <div className="md:block hidden text-neutral-600 ">
-            <NavigationLinks links={navigation} outerProps={{className: " font-normal"}} />
+            <NavigationLinks links={navigation} className="font-normal" />
           </div>
 
           <Button

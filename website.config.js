@@ -25,7 +25,7 @@ export const navigation = [
   // { name: "Publications", route: "/publications" },
   // { name: "Portfolio", route: "/projects" },
   // { name: "News", route: "/news" },
-  { name: "CV", route: "/Nanevie_AMEGASSI.pdf", innerProps: {target:"_blank"} },
+  { name: "CV", route: "/Nanevie_Amegassi.pdf", external: true }
 ];
 
 export const homepageSection = {
